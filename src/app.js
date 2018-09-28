@@ -2,9 +2,17 @@
 
 const express = require('express');
 const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
 
 const app = express();
 const router = express.Router();
+
+//Conecta ao banco
+mongoose.connect('mongodb://teste:teste@ds117623.mlab.com:17623/nodestr',{ useNewUrlParser: true });
+mongoose.set('useCreateIndex', true)
+
+//Carrega os Models
+const Product = require('./models/product');
 
 //Carrega as Rotas
 const indexRoute = require('./routes/index-route');
