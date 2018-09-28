@@ -8,7 +8,8 @@ const app = express();
 const router = express.Router();
 
 //Conecta ao banco
-mongoose.connect('mongodb://teste:teste@ds117623.mlab.com:17623/nodestr',{ useNewUrlParser: true });
+const strConnection = 'mongodb://teste:teste@ds117623.mlab.com:17623/nodestr';
+mongoose.connect(strConnection,{ useNewUrlParser: true });
 mongoose.set('useCreateIndex', true)
 
 //Carrega os Models
