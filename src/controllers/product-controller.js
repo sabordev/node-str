@@ -54,7 +54,7 @@ exports.post = (req, res, next) => {
             res.status(201).send({ message: 'Produto cadastrado com sucesso!' });
         }).catch(e => {
             res.status(400).send({
-                message: 'Problemas ao cadastrar o produto',
+                message: '´Problemas ao cadastrar o produto',
                 data: e
             })
         });
