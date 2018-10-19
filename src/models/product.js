@@ -7,7 +7,7 @@ const schema = new Schema({
     // _id
     title: {
         type: String,
-        required: [true,'Nome do Produto deve ser Informado'],
+        required: [true,'Nome do Produto é Obrigatório'],
         trim: true
     },
     slug: {
